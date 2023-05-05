@@ -1,0 +1,3 @@
+I created a simple hello world server with node.js and express: https://github.com/pavelkurach/hello-world-server/tree/main
+
+Here is the link to deployed server (on render.io): https://dashboard.render.com/web/srv-chahk7qk728r88099d0g

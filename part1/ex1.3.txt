@@ -1,0 +1,7 @@
+~ docker container run --name ubuntu devopsdockeruh/simple-web-service:ubuntu
+~ docker container ls -a
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED         STATUS         PORTS     NAMES
+a17fc8d0fc41   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   4 minutes ago   Up 4 minutes             ubuntu
+~ docker exec -it ubuntu bash
+~ tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
