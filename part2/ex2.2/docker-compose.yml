@@ -1,0 +1,10 @@
+services:
+    simple-web-service:
+        image: devopsdockeruh/simple-web-service:ubuntu
+        ports:
+            - 127.0.0.1:3005:8080
+        volumes:
+            - ./logs.txt:/usr/src/app/text.log
+        command: server
+        
+        

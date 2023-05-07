@@ -1,0 +1,25 @@
+services:
+    client:
+        build: ./example-frontend
+        ports:
+            - 127.0.0.1:3000:5000
+    server:
+        build: ./example-backend
+        environment:
+            - REDIS_HOST=redis
+            - POSTGRES_HOST=db
+            - POSTGRES_PASSWORD=example
+        ports:
+            - 127.0.0.1:8000:8000
+        depends_on:
+            - redis
+            - db
+    redis:
+        image: redis
+    db:
+        image: postgres
+        restart: unless-stopped
+        environment:
+            - POSTGRES_PASSWORD=example
+        volumes:
+            - ./data:/var/lib/postgresql/data

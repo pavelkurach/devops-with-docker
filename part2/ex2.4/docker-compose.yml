@@ -1,0 +1,13 @@
+services:
+    client:
+        build: ./example-frontend
+        ports:
+            - 127.0.0.1:3000:5000
+    server:
+        build: ./example-backend
+        environment:
+            - REDIS_HOST=redis
+        ports:
+            - 127.0.0.1:8000:8000
+    redis:
+        image: redis
